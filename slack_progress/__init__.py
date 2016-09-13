@@ -20,4 +20,4 @@ class SlackProgress(object):
 
     def make_bar(self, pos): 
         bar = (round(pos / 5) * chr(9608))
-        return '{} {}'.format(bar, pos + self.suffix)
+        return '{} {}{}'.format(bar, pos, self.suffix)
