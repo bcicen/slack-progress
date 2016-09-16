@@ -2,6 +2,8 @@
 
 A realtime progress bar for Slack
 
+![screencap][screencap]
+
 ## Installing
 
 ```bash
@@ -19,3 +21,5 @@ for i in range(1,101):
     s.update_bar(a)
     sleep(.2)
 ```
+
+[screencap]: http://i.imgur.com/103z4Io.gif "slack-progress"
