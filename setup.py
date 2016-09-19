@@ -11,11 +11,10 @@ setup(
     install_requires= [ 'slacker>=0.9.25' ],
     license='http://opensource.org/licenses/MIT',
     classifiers=(
-        'Natural Language :: English',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License ',
     ),
-    keywords='slack devops',
+    keywords='slack chatops devops',
 )
