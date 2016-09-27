@@ -7,6 +7,11 @@ class SlackProgress(object):
         self.slack = Slacker(token)
 
     def new(self, total=100):
+        """
+        Instantiate and return a new ProgressBar object
+        params:
+         - total(int): total number of items
+        """
         res = self.slack.chat.post_message(self.channel, self._makebar(0))
         bar = ProgressBar(self, total)
         bar.msg_ts = res.body['ts']
@@ -14,6 +19,10 @@ class SlackProgress(object):
         return bar
 
     def iter(self, iterable):
+        """
+        Wraps an iterable object, automatically creating
+        and updating a progress bar
+        """
         bar = self.new(total=len(iterable)-1)
         for idx, item in enumerate(iterable):
             yield(item)
@@ -55,5 +64,3 @@ class ProgressBar(object):
         if val != self._pos:
             self._sp._update(self.channel_id, self.msg_ts, val)
             self._pos = val
-        else:
-            print('skipped')
