@@ -1,5 +1,7 @@
 # slack-progress
 
+[![PyPI version](https://badge.fury.io/py/slack-progress.svg)](https://badge.fury.io/py/slack-progress)
+
 A realtime progress bar for Slack
 
 ![screencap][screencap]
