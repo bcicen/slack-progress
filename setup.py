@@ -8,13 +8,13 @@ setup(
     author='Bradley Cicenas',
     author_email='bradley@vektor.nyc',
     url='https://github.com/bcicen/slack-progress',
-    install_requires= [ 'slacker>=0.9.25' ],
+    install_requires=['slacker>=0.9.25'],
     license='http://opensource.org/licenses/MIT',
     classifiers=(
-        'Programming Language :: Python',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License ',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 3',
-        'License :: OSI Approved :: MIT License ',
     ),
-    keywords='slack chatops devops',
+    keywords='slack chatops devops'
 )
