@@ -10,11 +10,11 @@ setup(
     url='https://github.com/bcicen/slack-progress',
     install_requires=['slacker>=0.9.25'],
     license='http://opensource.org/licenses/MIT',
-    classifiers=(
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License ',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 3',
-    ),
+#    classifiers=(
+#        'Intended Audience :: Developers',
+#        'License :: OSI Approved :: MIT License ',
+#        'Programming Language :: Python :: 2',
+#        'Programming Language :: Python :: 3',
+#    ),
     keywords='slack chatops devops'
 )
