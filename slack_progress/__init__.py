@@ -12,7 +12,8 @@ class SlackProgress(object):
         params:
          - total(int): total number of items
         """
-        res = self.slack.chat.post_message(self.channel, self._makebar(0))
+        res = self.slack.chat.post_message(self.channel, self._makebar(0), 
+                                           as_user=True)
         bar = ProgressBar(self, total)
         bar.msg_ts = res.body['ts']
         bar.channel_id = res.body['channel']
