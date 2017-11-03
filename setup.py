@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='slack-progress',
-    version='0.3',
+    version='0.4',
     packages=find_packages(),
     description='A realtime progress bar for Slack',
     author='Bradley Cicenas',
