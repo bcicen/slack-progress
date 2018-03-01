@@ -30,11 +30,11 @@ The bar position can also be set manually:
 
 ```python
 pbar = sp.new()
-pbar.update(10)
+pbar.pos = 10
 time.sleep(1)
-pbar.update(50)
+pbar.pos = 50
 time.sleep(1)
-pbar.update(100)
+pbar.pos = 100
 time.sleep(1)
 ```
 
