@@ -38,4 +38,12 @@ pbar.pos = 100
 time.sleep(1)
 ```
 
+You can add logging messages too:
+```python
+pbar.pos = 50
+pbar.log("Step 1 complete")
+pbar.pos = 100
+pbar.log("Step 2 complete")
+```
+
 [screencap]: http://i.imgur.com/103z4Io.gif "slack-progress"
