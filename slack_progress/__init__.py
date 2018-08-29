@@ -33,10 +33,9 @@ class SlackProgress(object):
             bar.done = idx
 
     def _update(self, chan, msg_ts, pos, msg_log):
-        text = list(msg_log)
-        text.insert(0, self._makebar(pos))
-        text = '\n'.join(text)
-        self.slack.chat.update(chan, msg_ts, text)
+        content = [self._makebar(pos)] + msg_log
+        content = '\n'.join(content)
+        self.slack.chat.update(chan, msg_ts, content)
 
     def _makebar(self, pos):
         bar = (round(pos / 5) * chr(9608))
