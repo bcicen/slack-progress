@@ -72,9 +72,12 @@ class ProgressBar(object):
     def pos(self, val):
         if val != self._pos:
             self._pos = val
-            self._sp._update(self.channel_id, self.msg_ts, self._pos, self._msg_log)
+            self.update()
 
     def log(self, msg):
-        timestamp = time.strftime('%X - ')  # returns HH:MM:SS time
-        self._msg_log.append(timestamp + msg)
+        timestamp = time.strftime('%X')  # returns HH:MM:SS time
+        self._msg_log.append('*{}* - [{}]'.format(timestamp, msg))
+        self.update()
+
+    def update(self):
         self._sp._update(self.channel_id, self.msg_ts, self._pos, self._msg_log)
