@@ -29,13 +29,15 @@ for i in sp.iter(range(500)):
 The bar position can also be set manually:
 
 ```python
-pbar = sp.new()
+pbar = sp.new() # create new bar where 100% == pos 100
 pbar.pos = 10
 time.sleep(1)
-pbar.pos = 50
-time.sleep(1)
 pbar.pos = 100
+
+pbar = sp.new(total=500) # create new bar where 100% == pos 500
+pbar.pos = 100 # 20% complete
 time.sleep(1)
+pbar.pos = 500 # 100% complete
 ```
 
 You can add logging messages too:
